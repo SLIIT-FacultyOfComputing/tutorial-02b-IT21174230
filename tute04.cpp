@@ -23,7 +23,7 @@ int main() {
   std::cout << "Enter a value for r ";
   std::cin >> r;
   std::cout << "nCr = ";
-  std::cout << nCr(n,r);y
+  std::cout << nCr(n,r);
   std::cout << std::endl;
   return 0;
 }
@@ -32,14 +32,14 @@ long Factorial(int no)
 {
   long fac;
   int i;
-  for(i=no;no<=1;--no)
+  for(i=no;i<no;++i)
     {
-      fac=fac*no;
+      fac=fac*i;
     }
   return fac;
 }
 
 long nCr(int n, int r)
 {
-  return Factorial(n)/Factorial(n-r);
+  return Factorial(n)/Factorial(r)*Factorial(n-r);
 }
